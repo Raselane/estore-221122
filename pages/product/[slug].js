@@ -62,7 +62,7 @@ export default function ProductScreen(props) {
           <div className="card p-5">
             <div className="mb-2 flex justify-between">
               <div>Price</div>
-              <div>${product.price}</div>
+              <div>M{product.price}.00</div>
             </div>
             <div className="mb-2 flex justify-between">
               <div>Status</div>
