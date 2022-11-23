@@ -11,6 +11,7 @@ import { Store } from '../utils/Store';
 import DropdownLink from './DropdownLink';
 import shopping_cart from '../public/icons/shopping_cart.png';
 import dropdown from '../public/icons/dropdown.png';
+import Headerbottom from './Headerbottom';
 
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
@@ -47,7 +48,9 @@ export default function Layout({ title, children }) {
                 </a>
               </Link>
               <Link href="/">
-                <a className="hidden md:inline xl:inline text-md font-bold text-[#fff] ml-4 hover:text-white md:hover:text-lg">Sell on eStore</a>
+                <a className="hidden md:inline xl:inline text-md font-bold text-[#fff] ml-4 hover:text-white md:hover:text-lg">
+                  Sell on eStore
+                </a>
               </Link>
             </div>
 
@@ -91,7 +94,7 @@ export default function Layout({ title, children }) {
                     alt="cart-icon"
                   />
                   <text className="ml-2">
-                    <span className='hidden md:inline xl:inline'>Cart</span>
+                    <span className="hidden md:inline xl:inline">Cart</span>
                     {cartItemsCount > 0 && (
                       <span className="md:ml-1 xl:ml-1 rounded-full bg-[#ED017F] px-2 py-1 text-xs font-bold text-white">
                         {cartItemsCount}
@@ -106,11 +109,16 @@ export default function Layout({ title, children }) {
               ) : session?.user ? (
                 <Menu as="div" className="relative inline-block ml-2">
                   <Menu.Button className="text-blue-900 font-bold rounded md:rounded-lg xl:rounded-lg bg-white pt-1 pb-1 pr-1">
-                    {session.user.name.substring(0,4)}
+                    {session.user.name.substring(0, 4)}
                     {session.user.name.length > 4 && <text>..</text>}
-                    <Image src={dropdown} width={20} height={20} alt='dropdown-profile'/>
+                    <Image
+                      src={dropdown}
+                      width={20}
+                      height={20}
+                      alt="dropdown-profile"
+                    />
                   </Menu.Button>
-                  
+
                   <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white  shadow-lg ">
                     <Menu.Item>
                       <DropdownLink className="dropdown-link" href="/profile">
@@ -153,7 +161,8 @@ export default function Layout({ title, children }) {
               )}
             </div>
           </nav>
-        </header>
+          <Headerbottom/>
+         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">
           <p>Copyright © 2022 Amazona</p>
