@@ -126,9 +126,9 @@ textarea {
 }
 
 .arrow {
-  border: 2px solid white;
+  border: 2px solid grey;
   background-color: transparent;
-  color: #fff;
+  color: grey;
   cursor: pointer;
   height: 2rem;
   width: 2rem;

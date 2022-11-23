@@ -36,7 +36,7 @@ const Slider = () => {
   }, [currentSlide]);
 
   return (
-    <div className="slider h-90 md:h-[80vh] bg-slate-400 md:bg-white">
+    <div className="slider h-90 md:h-[80vh]">
       <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
       <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
       {sliderData.map((slide, index) => {
