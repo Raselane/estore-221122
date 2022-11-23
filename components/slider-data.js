@@ -10,7 +10,7 @@ export const sliderData = [
     desc: "Pay with your M-Pesa wallet",
   },
   {
-    image: "https://res.cloudinary.com/dynntfues/image/upload/v1669214498/banners/BLACK_FRIDAY_COUPON_Mesa_de_trabajo_1_zq7onu.jpg",
+    image: "https://res.cloudinary.com/dynntfues/image/upload/v1669223883/banners/3d-render-sale-discount-banner-with-sapce-your-text-flyer-poster-illustration-design_jjglyi.jpg",
     heading: "Free Delivery",
     desc: "Buy products worth M2500.00+ and get free delivery",
   },
