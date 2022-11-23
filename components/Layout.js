@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Store } from '../utils/Store';
 import DropdownLink from './DropdownLink';
 import shopping_cart from '../public/icons/shopping_cart.png';
+import dropdown from '../public/icons/dropdown.png';
 
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
@@ -53,13 +54,13 @@ export default function Layout({ title, children }) {
             <div className="input-group relative flex flex-row items-stretch">
               <input
                 type="search"
-                className="w-24 md:w-[250px] xl:w-[250px] md:px-3 xl:px-4 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-[#114488] focus:outline-none"
-                placeholder="Search"
+                className="w-24 md:w-[250px] xl:w-[250px] md:px-3 xl:px-4 text-[10px] md:text-base xl:text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-[#114488] focus:outline-none"
+                placeholder="Search product, brand, store"
                 aria-label="Search"
                 aria-describedby="button-addon2"
               />
               <button
-                className="btn px-2 md:px-6 xl:px-6 py-2.5 bg-[#FFF030] text-white md:font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-[hsl(56,76%,53%)] hover:shadow-lg"
+                className="btn px-2 md:px-6 xl:px-6 bg-[#FFF030] text-white md:font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-[hsl(56,76%,53%)] hover:shadow-lg"
                 type="button"
                 id="button-addon2"
               >
@@ -82,7 +83,7 @@ export default function Layout({ title, children }) {
             </div>
             <div>
               <Link href="/cart">
-                <a className="pt-1.5 pb-1.5 pr-1 bg-[#FFF] rounded md:rounded-lg xl:rounded-lgpx-1 md:px-2 text-[#114488]">
+                <a className="pt-2 pb-2 pr-1.5 bg-[#FFF] rounded md:rounded-lg xl:rounded-lg px-1 md:px-2 text-[#114488]">
                   <Image
                     src={shopping_cart}
                     width={16}
@@ -103,10 +104,13 @@ export default function Layout({ title, children }) {
               {status === 'loading' ? (
                 'Loading'
               ) : session?.user ? (
-                <Menu as="div" className="relative inline-block">
-                  <Menu.Button className="text-blue-600">
-                    {session.user.name.substring(0,4)}..
+                <Menu as="div" className="relative inline-block ml-2">
+                  <Menu.Button className="text-blue-900 font-bold rounded md:rounded-lg xl:rounded-lg bg-white pt-1 pb-1 pr-1">
+                    {session.user.name.substring(0,4)}
+                    {session.user.name.length > 4 && <text>..</text>}
+                    <Image src={dropdown} width={20} height={20} alt='dropdown-profile'/>
                   </Menu.Button>
+                  
                   <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white  shadow-lg ">
                     <Menu.Item>
                       <DropdownLink className="dropdown-link" href="/profile">
