@@ -12,6 +12,7 @@ import DropdownLink from './DropdownLink';
 import shopping_cart from '../public/icons/shopping_cart.png';
 import dropdown from '../public/icons/dropdown.png';
 import Headerbottom from './Headerbottom';
+import Slider from "./Slider";
 
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
@@ -162,6 +163,7 @@ export default function Layout({ title, children }) {
             </div>
           </nav>
           <Headerbottom/>
+          <Slider/> 
          </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">

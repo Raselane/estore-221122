@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Headerbottom() {
   return (
-      <div className="flex overflow-x-auto h-10 items-center md:px-6  xl:px-6 justify-between shadow-md bg-green-800 w-full">
+      <div className="flex min-w-full overflow-x-auto h-10 items-center md:px-6  xl:px-6 justify-between shadow-md bg-green-800 w-full">
         <Link href="/category/all">
           <a className="text-md font-bold text-[#fff] ml-4 hover:text-white flex-shrink-0">
             All Categories
