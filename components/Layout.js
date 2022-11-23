@@ -45,9 +45,8 @@ export default function Layout({ title, children }) {
                   <span className="text-red-600 font-[Galada]">e</span>Store
                 </a>
               </Link>
-
               <Link href="/">
-                <a className="text-md font-bold text-[#fff] ml-4 hover:text-white md:hover:text-lg">Sell on eStore</a>
+                <a className="hidden md:inline xl:inline text-md font-bold text-[#fff] ml-4 hover:text-white md:hover:text-lg">Sell on eStore</a>
               </Link>
             </div>
 
