@@ -51,7 +51,7 @@ textarea {
 
 .slider {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   position: relative;
   overflow: hidden;
 }
@@ -150,7 +150,7 @@ textarea {
   left: 1.5rem;
 }
 
-hr {
+.hr {
   height: 2px;
   background: white;
   width: 50%;

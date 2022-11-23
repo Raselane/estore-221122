@@ -41,7 +41,7 @@ export default function Layout({ title, children }) {
 
       <div className="flex min-h-screen flex-col justify-between ">
         <header>
-          <nav className="flex h-14 items-center md:px-6  xl:px-6 justify-between shadow-md bg-[#00EC8A]">
+          <nav className="flex h-14 items-center md:px-6  xl:px-6 justify-between shadow-md bg-[#00EC8A] z-50">
             <div>
               <Link href="/">
                 <a className="text-2xl font-bold text-[#114488]s bg-[#FFF030] rounded-lg px-2">
@@ -108,7 +108,7 @@ export default function Layout({ title, children }) {
               {status === 'loading' ? (
                 'Loading'
               ) : session?.user ? (
-                <Menu as="div" className="relative inline-block ml-2">
+                <Menu as="div" className="relative inline-block ml-2 z-10">
                   <Menu.Button className="text-blue-900 font-bold rounded md:rounded-lg xl:rounded-lg bg-white pt-1 pb-1 pr-1">
                     {session.user.name.substring(0, 4)}
                     {session.user.name.length > 4 && <text>..</text>}
@@ -163,7 +163,9 @@ export default function Layout({ title, children }) {
             </div>
           </nav>
           <Headerbottom/>
+          {title === "Home Page" &&
           <Slider/> 
+          }
          </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">

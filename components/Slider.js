@@ -8,7 +8,7 @@ const Slider = () => {
 
   const autoScroll = true;
   let slideInterval;
-  let intervalTime = 5000;
+  let intervalTime = 3000;
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
@@ -36,7 +36,7 @@ const Slider = () => {
   }, [currentSlide]);
 
   return (
-    <div className="slider mb-0">
+    <div className="slider h-90 md:h-[80vh] bg-slate-400 md:bg-white">
       <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
       <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
       {sliderData.map((slide, index) => {
@@ -48,7 +48,7 @@ const Slider = () => {
             {index === currentSlide && (
               <div>
                 <img src={slide.image} alt="slide" className="image" />
-                <div className="content hidden md:inline xl:inline">
+                <div className="content">
                   <h2>{slide.heading}</h2>
                   <p>{slide.desc}</p>
                   <hr />
