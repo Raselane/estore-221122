@@ -38,7 +38,7 @@ export default function Layout({ title, children }) {
 
       <div className="flex min-h-screen flex-col justify-between ">
         <header>
-          <nav className="flex h-14 items-center px-6 justify-between shadow-md bg-[#00EC8A]">
+          <nav className="flex h-14 items-center md:px-6  xl:px-6 justify-between shadow-md bg-[#00EC8A]">
             <div>
               <Link href="/">
                 <a className="text-2xl font-bold text-[#114488]s bg-[#FFF030] rounded-lg px-2">
@@ -50,16 +50,16 @@ export default function Layout({ title, children }) {
               </Link>
             </div>
 
-            <div className="input-group relative flex flex-wrap items-stretch">
+            <div className="input-group relative flex flex-row items-stretch">
               <input
                 type="search"
-                className="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-[#114488] focus:outline-none"
+                className="w-24 md:w-[250px] xl:w-[250px] md:px-3 xl:px-4 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-[#114488] focus:outline-none"
                 placeholder="Search"
                 aria-label="Search"
                 aria-describedby="button-addon2"
               />
               <button
-                className="btn px-6 py-2.5 bg-[#FFF030] text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-[hsl(56,76%,53%)] hover:shadow-lg"
+                className="btn px-2 md:px-6 xl:px-6 py-2.5 bg-[#FFF030] text-white md:font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-[hsl(56,76%,53%)] hover:shadow-lg"
                 type="button"
                 id="button-addon2"
               >
@@ -82,7 +82,7 @@ export default function Layout({ title, children }) {
             </div>
             <div>
               <Link href="/cart">
-                <a className="p-2 bg-[#FFF] rounded-lg px-2 text-[#114488]">
+                <a className="pt-1.5 pb-1.5 pr-1 bg-[#FFF] rounded md:rounded-lg xl:rounded-lgpx-1 md:px-2 text-[#114488]">
                   <Image
                     src={shopping_cart}
                     width={16}
@@ -90,9 +90,9 @@ export default function Layout({ title, children }) {
                     alt="cart-icon"
                   />
                   <text className="ml-2">
-                    Cart
+                    <span className='hidden md:inline xl:inline'>Cart</span>
                     {cartItemsCount > 0 && (
-                      <span className="ml-1 rounded-full bg-[#ED017F] px-2 py-1 text-xs font-bold text-white">
+                      <span className="md:ml-1 xl:ml-1 rounded-full bg-[#ED017F] px-2 py-1 text-xs font-bold text-white">
                         {cartItemsCount}
                       </span>
                     )}
