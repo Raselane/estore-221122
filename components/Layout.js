@@ -58,7 +58,7 @@ export default function Layout({ title, children }) {
             <div className="input-group relative flex flex-row items-stretch">
               <input
                 type="search"
-                className="w-24 md:w-[250px] xl:w-[250px] md:px-3 xl:px-4 text-[10px] md:text-base xl:text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-[#114488] focus:outline-none"
+                className="w-24 md:w-[250px] xl:w-[250px] md:px-3 xl:px-4 text-[5.8px] md:text-base xl:text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-[#114488] focus:outline-none"
                 placeholder="Search product, brand, store"
                 aria-label="Search"
                 aria-describedby="button-addon2"
