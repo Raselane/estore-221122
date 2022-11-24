@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { sliderData } from "./slider-data";
+import Image from "next/image";
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,7 +48,7 @@ const Slider = () => {
           >
             {index === currentSlide && (
               <div>
-                <img src={slide.image} alt="slide" className="image" />
+                <Image width={1360} height={1000} src={slide.image} alt="slide" className="image" />
                 <div className="content">
                   <h2>{slide.heading}</h2>
                   <p>{slide.desc}</p>
